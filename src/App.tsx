@@ -1,10 +1,15 @@
-import { useState } from "react";
+import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div>
-      <h1 className="bg-slate-200">hello</h1>
-    </div>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </>
   );
 }
 
