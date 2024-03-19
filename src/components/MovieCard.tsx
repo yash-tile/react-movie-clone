@@ -4,18 +4,14 @@ import requests from "../Requests";
 import { MdOutlineWatchLater, MdWatchLater } from "react-icons/md";
 
 interface MovieCardProps {
-  key: number;
   movie: MovieInterface;
 }
 
-function MovieCard({ key, movie }: MovieCardProps) {
+function MovieCard({ movie }: MovieCardProps) {
   const [isWatchLater, setWatchLater] = useState(false);
 
   return (
-    <div
-      key={key}
-      className="w-[150px] sm:w-[200px] md:w-[220px] lg:w-[250px] inline-block cursor-pointer p-2 relative"
-    >
+    <div className="w-[150px] sm:w-[200px] md:w-[220px] lg:w-[250px] inline-block cursor-pointer p-2 relative">
       <img
         src={requests.imageBaseUrl + movie.poster_path}
         alt={movie.title}
