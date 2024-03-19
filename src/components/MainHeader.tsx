@@ -28,7 +28,7 @@ function MainHeader() {
       {/* below div is used to add black gradient overlay over the image */}
       <div className="w-full h-[550px] bg-gradient-to-r from-black absolute"></div>
       <img
-        src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}
+        src={requests.imageBaseUrl + movie?.backdrop_path}
         alt={movie?.title}
         className="w-full h-full object-cover"
       />
