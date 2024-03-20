@@ -1,11 +1,11 @@
-import MainHeader from "../components/MainHeader";
+import HeaderMovie from "../components/HeaderMovie";
 import MovieRow from "../components/MovieRow";
 import requests from "../Requests";
 
 function Home() {
   return (
     <div>
-      <MainHeader />
+      <HeaderMovie />
       <MovieRow rowTitle="Upcoming" fetchUrl={requests.requestUpcoming} />
       <MovieRow rowTitle="Trending" fetchUrl={requests.requestTrending} />
       <MovieRow rowTitle="Popular" fetchUrl={requests.requestPopular} />
