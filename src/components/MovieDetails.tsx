@@ -7,6 +7,7 @@ import { FaStar } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
 import HeaderMovieOverview from "./HeaderMovieOverview";
 import MovieBtnGroup from "./MovieBtnGroup";
+import MovieDetailsInterface from "../interfaces/MovieDetailsInterface";
 
 // to convert runtime from minutes to hours and minutes
 function formatRuntime(minutes: number) {
@@ -22,7 +23,7 @@ function formatAverageRating(rating: number) {
 
 function MovieDetails() {
   const { id } = useParams();
-  const [movieDetails, setMovieDetails] = useState(null);
+  const [movieDetails, setMovieDetails] = useState<MovieDetailsInterface>();
 
   const fetchMovieDetails = async () => {
     try {

@@ -2,9 +2,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import requests from "../Requests";
 import HeaderMovieText from "./HeaderMovieText";
+import MovieInterface from "../interfaces/MovieInterface";
 
 function HeaderMovie() {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState<MovieInterface[]>([]);
 
   const movie = movies[Math.floor(Math.random() * movies.length)];
   // by default it will run only once, component will re-render due to setState function inside it
