@@ -29,12 +29,12 @@ function HeaderMovieOverview({ movieOverview }: HeaderMovieOverviewProps) {
   return (
     <>
       {isShowMore ? (
-        <p className="text-gray-300 w-full md:w-[50%] sm:w-[75%] xs:w-[100%]">
+        <p className="text-gray-300 w-full md:w-[50%] sm:w-[75%] xs:w-[100%] my-2">
           {movieOverview}
         </p>
       ) : (
         <>
-          <p className="text-gray-300 w-full md:w-[50%] sm:w-[75%] xs:w-[100%]">
+          <p className="text-gray-300 w-full md:w-[50%] sm:w-[75%] xs:w-[100%] my-2">
             {truncateString(movieOverview, charTruncationLimit)}
 
             {/* will show 'Show More' btn only if text over specified limit */}
