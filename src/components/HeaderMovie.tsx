@@ -29,6 +29,7 @@ function HeaderMovie() {
       />
 
       <HeaderMovieText
+        movieId={movie?.id}
         movieTitle={movie?.title}
         movieReleaseDate={movie?.release_date}
         movieOverview={movie?.overview}

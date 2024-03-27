@@ -6,6 +6,7 @@ import { FaLanguage } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
 import HeaderMovieOverview from "./HeaderMovieOverview";
+import MovieBtnGroup from "./MovieBtnGroup";
 
 // to convert runtime from minutes to hours and minutes
 function formatRuntime(minutes: number) {
@@ -116,14 +117,7 @@ function MovieDetails() {
           </div>
 
           {/* play and watch later buttons */}
-          <div className="my-4">
-            <button className="border border-gray-300 bg-gray-300 text-black py-2 px-4">
-              Play
-            </button>
-            <button className="border border-gray-300 text-white py-2 px-4 ml-4">
-              Watch Later
-            </button>
-          </div>
+          <MovieBtnGroup movieId={movieDetails?.id} />
         </div>
       </div>
     </div>
