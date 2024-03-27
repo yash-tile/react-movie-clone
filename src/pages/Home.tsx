@@ -13,8 +13,8 @@ function Home() {
       />
       <MovieRow
         rowId="2"
-        rowTitle="Trending"
-        fetchUrl={requests.requestTrending}
+        rowTitle="Now Playing"
+        fetchUrl={requests.requestNowPlaying}
       />
       <MovieRow
         rowId="3"
