@@ -11,7 +11,7 @@ function Navbar() {
     setSearchQuery(e.target.value);
   };
 
-  const handleSearchSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleSearchSubmit = () => {
     console.log("Search query:", searchQuery);
     navigate(`/search/${searchQuery}`);
     setSearchQuery(""); // clear input field after submitting search
@@ -30,6 +30,11 @@ function Navbar() {
           placeholder="Search movies..."
           value={searchQuery}
           onChange={handleSearchChange}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleSearchSubmit();
+            }
+          }}
           className="rounded-l py-2 px-4 outline-none"
           style={{ lineHeight: "normal", height: "calc(2.25rem + 2px)" }}
         />
