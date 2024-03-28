@@ -1,4 +1,4 @@
-const apiKey = "00762c6d47184b36b8d9db145f608e27";
+export const apiKey = import.meta.env.VITE_IMDB_API_KEY;
 
 const requests = {
     requestPopular: `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`,
@@ -12,4 +12,4 @@ const requests = {
     youtubeBaseUrl: "https://www.youtube.com/embed/"
 };
 
-  export default requests;
+export default requests;

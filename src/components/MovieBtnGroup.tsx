@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import requests from "../Requests";
+import { apiKey } from "../Requests";
 import MovieVideosInterface from "../interfaces/MovieVideosInterface";
 
 // to get key of offical trailer from results of videos api
@@ -24,7 +25,7 @@ function MovieBtnGroup({ movieId }: { movieId: number }) {
   const fetchTrailerUrl = async () => {
     try {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=00762c6d47184b36b8d9db145f608e27`
+        `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}`
       );
       const trailerKey = getTrailerKey(response.data);
       if (trailerKey) {

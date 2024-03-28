@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import requests from "../Requests";
+import requests, { apiKey } from "../Requests";
 import { FaLanguage } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
@@ -28,7 +28,7 @@ function MovieDetails() {
   const fetchMovieDetails = async () => {
     try {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/movie/${id}?api_key=00762c6d47184b36b8d9db145f608e27&language=en-US`
+        `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
       );
       setMovieDetails(response.data);
     } catch (error) {
